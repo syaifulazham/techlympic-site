@@ -368,6 +368,10 @@ nav{
 
 
 @media (max-width: 767px) {
+    body{
+        overflow-x: hidden;
+    }
+
     nav{
         flex-direction: column;
         height: auto;
