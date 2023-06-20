@@ -179,6 +179,16 @@ nav{
     color: #fff;
     border: 1px solid #8f8f8f;
     border-radius: 16px;
+    z-index: 9999999;
+}
+
+.button:hover{
+    border: 2px solid #fff;
+    background-color: var(--color1);
+}
+
+.w-200{
+    width: 200px !important;
 }
 
 .semarak{
