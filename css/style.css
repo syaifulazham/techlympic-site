@@ -84,6 +84,16 @@ section{
 
 }
 
+.bg-small{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.42;
+    display: none;
+}
+
 .logos{
     display: flex;
     flex-direction: row;
@@ -391,8 +401,11 @@ nav{
     }
 
     .bg{
-        height: 100vh;
-        width: 100%;
+        display: none;
+    }
+
+    .bg-small{
+        display: block;
     }
 
     #mosti{
