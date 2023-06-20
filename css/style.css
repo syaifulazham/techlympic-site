@@ -3,6 +3,9 @@
 :root{
     --color1:#1e5486;
     --color2:#0e365c;
+    --color3:#0e365c66;
+    --color4:#061420;
+    --color5:#ddd0cb;
 }
 
 body {
@@ -13,13 +16,48 @@ body {
 
 section{
     width: 100%;
-    height: 100vh;
 }
 
 #section-1{
     display: flex;
     flex-direction: column;
-    background-color: var(--color1);
+    background-color: var(--color4);
+    padding-bottom: 60px;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#section-2{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color5);
+    padding-bottom: 60px;
+    overflow-x: hidden;
+    z-index: 9999999999;
+}
+
+#section-3{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color5);
+    padding-bottom: 60px;
+    overflow-x: hidden;
+    z-index: 9999999999;
+}
+
+#section-4{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color5);
+    padding-bottom: 60px;
+    overflow-x: hidden;
+    z-index: 9999999999;
+}
+
+
+.center{
+    align-items: center !important;
+    justify-items: center !important;
 }
 
 .page-header{
@@ -27,7 +65,50 @@ section{
     flex-direction: column;
     height: 200px;
     width: 100%;
-    background-color: #ffffff22;
+    background-color: var(--color3);
+    z-index: 999999;
+}
+
+.bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.42;
+
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+}
+
+.logos > .logo {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+#mosti{
+    width:120px;
+    height:120px;
+}
+
+#techlympics{
+    width:180px;
+    height:120px;
+}
+#madani{
+    width:220px;
+    height: fit-content;
 }
 
 nav{
@@ -66,10 +147,21 @@ nav{
     text-align: center;
 }
 
+.nav-menu-item:hover{
+    background-color: var(--color4);
+}
+
 .taglines-container{
-    padding: 10px 60px 10px 60px;
-    height: 150px;
+    color: #fff;
+    padding: 10px 60px 10px 120px;
+    height: 250px;
     width: 100%;
+    z-index: 999999;
+}
+
+.taglines-container > h3{
+    font-size: xx-large !important;
+    font-weight: 600;
 }
 
 .float-bottom{
@@ -77,12 +169,254 @@ nav{
 }
 
 .button{
-    padding: 10px;
+    position: relative;
+    top: 10px;
+    padding: 10px 30px 10px 30px;
     font-size:large;
     font-weight: 600;
     text-decoration: none;
     background-color: var(--color2);
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #8f8f8f;
     border-radius: 16px;
+}
+
+.semarak{
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--color5);
+    min-height: 300px;
+}
+
+.semarak > img.techlympic{
+    width: 50vw;
+    height: fit-content;
+}
+
+.semarak > h1{
+    font-size: 200%;
+    text-align: center;
+    color: var(--color1);
+}
+
+.themes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.theme{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100px;
+    height: 250px;
+    flex-basis: calc(33% - 20px); /* Adjust as needed */
+    margin: 10px; /* Adjust as needed */
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 0 10px 0;
+    font-weight: 100;
+}
+
+.theme:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.theme > img{
+    width: 130px;
+    height: fit-content;
+}
+
+.theme-label{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 90%;
+}
+
+.theme-label-n{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    padding: 5px;
+    font-size: 120%;
+    font-weight: 800;
+    margin-top: auto;
+}
+
+.text-main{
+    color: #fff;
+}
+
+.c1{
+    color: #3AB355;
+}
+
+.c2{
+    color: #FFB340;
+}
+
+.c3{
+    color: #EA5500;
+}
+
+.c4{
+    color: #4791E5;
+}
+
+.c5{
+    color: #DD2AB7;
+}
+
+.c6{
+    color: #5E17EB;
+}
+
+.news-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px;
+    z-index: 9999999;
+}
+
+#finali{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5 !important;
+
+}
+
+.social-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 9999999;
+}
+
+.social{
+    text-decoration: none;
+    padding: 10px;
+}
+.social > img{
+    height: 55px;
+    width: fit-content;
+}
+
+.timeline-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tlines{
+    width: 50%;
+}
+
+.tlines > .tline-event {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    border-right: 1px dashed var(--color1);
+    text-align: right;
+    padding-right: 50px;
+}
+
+.tlines > .tline-event-r {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.bottom-dashed{
+    border-bottom: 1px dashed var(--color1);
+}
+
+.title-timeline{
+    font-weight: 700;
+}
+
+#section-3 > h1{
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+    color: var(--color1);
+}
+
+
+@media (max-width: 767px) {
+    nav{
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-menu{
+        flex-direction: column;
+    }
+
+    .taglines-container{
+        padding: 0;
+        text-align: center;
+    }
+
+    .bg{
+        height: 100vh;
+        width: auto;
+    }
+
+    #mosti{
+        width:60px;
+        height:fit-content;
+    }
+    
+    #techlympics{
+        width:80px;
+        height:fit-content;
+    }
+    #madani{
+        width:100px;
+        height: fit-content;
+    }
+
+    .theme{
+        padding-top: 10px;
+        height: 180px;
+    }
+
+    .theme > img{
+        width: 60px;
+        height: fit-content;
+    }
+
+    .theme-label-n{
+        font-size: small;
+        font-weight: 300;
+    }
+
+    .news-container{
+        padding: 12px;
+    }
+
+    .social > img{
+        padding-right: 5px;
+        width: 35px;
+        height: fit-content;
+    }
+
+    #finali{
+        width: 100%;
+        height: fit-content;
+    }
 }

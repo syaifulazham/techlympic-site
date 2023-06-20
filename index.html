@@ -1,46 +1,178 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
     </head>
 
     <body>
         <section id="section-1">
+            
             <div class="page-header">
+                <div class="logos">
+                    <div class="logo-container">
+                        <img id="mosti" src="./img/mosti-white.png" alt="" class="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img id="techlympics" src="./img/techlympics-colored.png" alt="" class="logo">
+                    </div>
+                    <div class="logo-container">
+                        <img id="madani" src="./img/madani-n.png" alt="" class="logo">
+                    </div>
+                </div>
                 <nav>
                     <div class="nav-menu">
                         <div class="nav-menu-item">
-                            <a href="">Utama</a>
+                            <a href="#">Utama</a>
                         </div>
                         <div class="nav-menu-item">
-                            <a href="">Pertandingan</a>
+                            <a href="#section-2">Pertandingan</a>
                         </div>
                         <div class="nav-menu-item">
-                            <a href="">Pendaftaran</a>
+                            <a href="https://challenge.techlympics.my" target="_blank">Pendaftaran</a>
                         </div>
                         <div class="nav-menu-item">
-                            <a href="">Hubungi</a>
+                            <a href="#section-4">Hubungi</a>
                         </div>
                     </div>
                 </nav>
             </div>
 
             <div class="taglines-container float-bottom">
+                <h3>LUAR BIASA . GLOBAL . INKLUSIF</h3>
                 <a class="button" href="https://drive.google.com/file/d/1CrwcOay0biky-lPIPbNy7kDF6W_JuQel/view" target="_blank" >
                     Baca Lebih Lanjut
                 </a>
             </div>
+
+            <img class="bg" src="./img/hero-bg.png" alt="">
         </section>
-        <section>
+        <section id="section-2">
+            <div class="semarak center">
+                <img class="techlympic" src="./img/techlympics-blue.png" alt="">
+                <h1>Semarakkan Budaya STIE Negara bersama Malaysia Techlympics!</h1>
+                <br>
+                <br>
+                <h1>Tema Pertandingan</h1>
+                <h3>"Luar Biasa, Kolaborasi, Inklusif"</h3>
+
+                <div class="themes">
+                    <div class="theme c1" onclick="goto(1)">
+                        <img src="./img/picto-ts.png" alt="">
+                        <div class="theme-label">TEKNOLOGI SOHOR</div>
+                        <div class="theme-label-n">11 Pertandingan</div>
+                    </div>
+                    <div class="theme c2" onclick="goto(2)">
+                        <img src="./img/picto-ikr.png" alt="">
+                        <div class="theme-label">INOVASI KREATIF UNTUK KESEJAHTERAAN RAKYAT</div>
+                        <div class="theme-label-n">11 Pertandingan</div>
+                    </div>
+                    <div class="theme c3" onclick="goto(3)">
+                        <img src="./img/picto-sci.png" alt="">
+                        <div class="theme-label">SAINS & INOVASI</div>
+                        <div class="theme-label-n">4 Pertandingan</div>
+                    </div>
+                    <div class="theme c4" onclick="goto(4)">
+                        <img src="./img/picto-aer.png" alt="">
+                        <div class="theme-label">AEROANGKASA</div>
+                        <div class="theme-label-n">6 Pertandingan</div>
+                    </div>
+                    <div class="theme c5" onclick="goto(5)">
+                        <img src="./img/picto-kbs.png" alt="">
+                        <div class="theme-label">KECERDASAN BUATAN & SAINS DATA</div>
+                        <div class="theme-label-n">7 Pertandingan</div>
+                    </div>
+                    <div class="theme c6" onclick="goto(6)">
+                        <img src="./img/picto-ktm.png" alt="">
+                        <div class="theme-label">KETERANGKUMAN MALAYSIA MADANI</div>
+                        <div class="theme-label-n">3 Pertandingan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-3">
+            <h1>Garis masa Malaysia Techlympics</h1>
+            <h1>2023</h1>
+            <div class="timeline-container">
+                <div class="tlines">
+                    <div class="tline-event"></div>
+                    <div class="tline-event bottom-dashed">
+                        <span class="title-timeline">JUN - JUL 2023</span>
+                        <span>Peringkat Sekolah</span>
+                    </div>
+                    <div class="tline-event"></div>
+                    <div class="tline-event"></div>
+                </div>
+                <div class="tlines">
+                    <div class="tline-event-r"></div>
+                    <div class="tline-event-r"></div>
+                    <div class="tline-event-r bottom-dashed">
+                        <span class="title-timeline">OGOS - OKT 2023</span>
+                        <span>Peringkat Negeri</span>
+                    </div>
+                    <div class="tline-event-r"></div>
+                </div>
+            </div>
+            <h1>25 & 26 NOV</h1>
+            <h1>Malaysia Techlympic Pusingan Akhir</h1>
+        </section>
+        <section id="section-4">
+            <div class="news-container">
+                <h3 class="text-main">Untuk maklumat lanjut mengenai Malaysia Techlympics boleh ikuti kami di:</h3>
+                <div class="social-container">
+                    <a class="social" href="">
+                        <img src="./img/sosmed/tele.png" alt="" class="icon">
+                    </a>
+                    <a class="social" href="">
+                        <img src="./img/sosmed/insta.png" alt="" class="icon">
+                    </a>
+                    <a class="social" href="">
+                        <img src="./img/sosmed/fb.png" alt="" class="icon">
+                    </a>
+                    <a class="social" href="">
+                        <img src="./img/sosmed/ytube.png" alt="" class="icon">
+                    </a>
+                    <a class="social" href="">
+                        <img src="./img/sosmed/tiktok.png" alt="" class="icon">
+                    </a>
+                    <a class="social" href="">
+                        <img src="./img/sosmed/tw.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+
+            <img id="finali" src="./img/final.JPG" alt="">
+
             
         </section>
-        <section>
-            
-        </section>
-        <section>
-            
-        </section>
-        <section>
-            
-        </section>
+
+
+        <script>
+            function goto(n){
+                var lnk = "";
+                switch(n){
+                    case 1:
+                        lnk="https://drive.google.com/file/d/1RKx1Waklxajf5vkvg8tBzTXWy4E0YN1I/view";
+                        break;
+                    case 2:
+                        lnk="https://drive.google.com/file/d/1IHn-GKaF6f1Utu7DF22zyjS9tYb0Whu7/view";
+                        break;
+                    case 3:
+                        lnk="https://drive.google.com/file/d/1ncON_DX03Ex7dohqOEB_Q4NWVUPeiLSA/view";
+                        break;
+                    case 4:
+                        lnk="https://drive.google.com/file/d/1YTyaiNspSkZJPOIxjZqBFARLF6I-tAPJ/view?usp=drive_link";
+                        break;
+                    case 5:
+                        lnk="https://drive.google.com/file/d/1mEC75J0JHqQnxLq1CoYc4TZUg6HaOVZs/view?usp=drive_link";
+                        break;
+                    case 6:
+                        lnk="https://drive.google.com/file/d/1Sf1np2ya1yzysZm8ytrKBwJ_RJD-E-aB/view";
+                        break;
+
+                }
+
+                window.open(lnk, "_blank");
+            }
+        </script>
     </body>
 </html>
