@@ -429,7 +429,7 @@ nav{
 
     .theme > img{
         width: 60px;
-        height: fit-content;
+        height: 60px;
     }
 
     .theme-label-n{
@@ -449,6 +449,6 @@ nav{
 
     #finali{
         width: 100%;
-        height: fit-content;
+        height: auto;
     }
 }
