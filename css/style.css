@@ -410,16 +410,16 @@ nav{
 
     #mosti{
         width:60px;
-        height:fit-content;
+        height:auto;
     }
     
     #techlympics{
         width:80px;
-        height:fit-content;
+        height:auto;
     }
     #madani{
         width:100px;
-        height: fit-content;
+        height: auto;
     }
 
     .theme{
@@ -444,7 +444,7 @@ nav{
     .social > img{
         padding-right: 5px;
         width: 35px;
-        height: fit-content;
+        height: 35px;;
     }
 
     #finali{
