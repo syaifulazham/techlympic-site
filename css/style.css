@@ -183,6 +183,41 @@ nav{
     margin-top: auto;
 }
 
+.float-right{
+    margin-left: auto;
+    padding-right: 120px;
+}
+
+.tagline-right{
+    padding: 0 120px 0 0;
+    background-color: #fff6;
+    border: 3px solid #fff;
+    border-radius: 30px;
+}
+
+.tagline-right:hover{
+    background-color: #f006;
+}
+
+.tagline-right img{
+    width: 100px;
+    height: 150px;
+}
+
+.tagline-right a{
+    text-decoration: none;
+}
+
+.tagline-right .redbrick-label{
+    padding: 5px;
+    text-align: center;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #f00;
+    border-top-left-radius: 30px;
+    
+}
+
 .button{
     position: relative;
     top: 10px;
@@ -381,6 +416,14 @@ nav{
     color: var(--color1);
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
 
 @media (max-width: 767px) {
     body{
@@ -450,5 +493,15 @@ nav{
     #finali{
         width: 100%;
         height: auto;
+    }
+
+    .tagline-right{
+        padding: 0;
+    }
+
+    .tagline-right .redbrick-label{
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        
     }
 }
