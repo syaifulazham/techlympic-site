@@ -2,7 +2,7 @@
     <head>
         <title>MALAYSIA TECHLYMPICS 2023</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css?v=1.7">
+        <link rel="stylesheet" href="./css/style.css?v=1.7.2">
     </head>
 
     <body>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
     
-                <img class="bg" src="./img/hero-bg.png" alt="">
+                <img class="bg kenburns-bottom-left" src="./img/bg/1.png" alt="">
                 <img class="bg-small" src="./img/bg-small.jpg" alt="">
             </section>
             <section id="section-2">
@@ -194,6 +194,42 @@
 
                 window.open(lnk, "_blank");
             }
+        </script>
+
+        <script>
+            function changeBackgroundImage() {
+                const imgElement = document.querySelector('.bg');
+                let currentImageNumber = 1;
+            
+                setInterval(() => {
+                    currentImageNumber = currentImageNumber % 4 + 1; // Loop from 1 to 5
+                    const imagePath = `./img/bg/${currentImageNumber}.png`;
+                    imgElement.src = imagePath;
+                }, 15000); // 15 seconds in milliseconds
+            }
+            // Call the function to start changing the background image
+            changeBackgroundImage();
+        </script>
+
+        <script>
+            function toggleKenburnsEffect() {
+                const imgElement = document.querySelector('.bg');
+                let isBottomLeft = true;
+            
+                setInterval(() => {
+                    if (isBottomLeft) {
+                    imgElement.classList.remove('kenburns-bottom-left');
+                    imgElement.classList.add('kenburns-bottom-right');
+                    } else {
+                    imgElement.classList.remove('kenburns-bottom-right');
+                    imgElement.classList.add('kenburns-bottom-left');
+                    }
+                    isBottomLeft = !isBottomLeft;
+                }, 6000); // 6 seconds in milliseconds
+            }
+        
+            // Call the function to start toggling the kenburns effect
+            toggleKenburnsEffect();
         </script>
     </body>
 </html>
