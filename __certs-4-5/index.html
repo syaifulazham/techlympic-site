@@ -199,13 +199,12 @@
             {negeri:'KELANTAN',namasekolah:'SMK BAROH PIAL',link:'https://drive.google.com/file/d/1yuVDRnwNdUb0PPzgTiN0KxxO85weEPwd/view?usp=drivesdk'},
             {negeri:'KELANTAN',namasekolah:'SEKOLAH KEBANGSAAN KAMPONG BEDAL',link:'https://drive.google.com/file/d/1axjl1xiIRsDWbdaJykJe2LS-d6gu3NRg/view?usp=drivesdk'},
             {negeri:'KELANTAN',namasekolah:'SK SULTAN IBRAHIM 3',link:'https://drive.google.com/file/d/1pdwjxNEjs6ufeQjs3yEERCjavziaMxve/view?usp=drivesdk'},
-            {negeri:'TERENGGANU',namasekolah:'SK AYER PUTEH',link:'https://drive.google.com/file/d/13f-7qBvqWYHcqeqxm6oB-0x4v3GQsAgl/view?usp=drivesdk'},
+            {negeri:'TERENGGANU',namasekolah:'SK AYER PUTEH',link:'https://drive.google.com/file/d/18bX0xKWb3pdfkCiOqc-8-hchM0FStLLL/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SMK KOMPLEKS GONG BADAK',link:'https://drive.google.com/file/d/1BBw_gIJHVtEpMfH1_di6F1c3JgPWkK8Z/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SK KELULUT',link:'https://drive.google.com/file/d/1AVP_kmomkxDSUkondRbCWbKNz3XmeSU4/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SMK GELIGA',link:'https://drive.google.com/file/d/1feKkZpFmB6e82l1xRozsmXw_xhw3ah4W/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SEKOLAH KEBANGSAAN TELUK KETAPANG',link:'https://drive.google.com/file/d/19fseC3UIhQOjW5jBo1zk_A0cflgiJgZx/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SJKC CHUNG HWA JERTEH',link:'https://drive.google.com/file/d/1VGJrFTkIUhQL5dXA90KO2xeGC6W4awsZ/view?usp=drivesdk'},
-            {negeri:'TERENGGANU',namasekolah:'SK AYER PUTEH',link:'https://drive.google.com/file/d/1tfZQB0R-qEBFR17kjSut0-P17pJik_Wm/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SK BINJAI KERTAS',link:'https://drive.google.com/file/d/1u7RhE-qjybnXBt1pqyAu0EhfCtQZYkCV/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SMK AGAMA DURIAN GULING',link:'https://drive.google.com/file/d/13cbX6kNWCIp0una1_ltT2_TDDRLcqx-F/view?usp=drivesdk'},
             {negeri:'TERENGGANU',namasekolah:'SK TELUK KETAPANG TAPANG',link:'https://drive.google.com/file/d/1k_gFN_vhi0b3uwmzNqwzv3arPsh7Q3ab/view?usp=drivesdk'},
@@ -307,7 +306,7 @@
                 o.attr('class', 'negeri');
                 ul = o.append('ul')
                 ul.append('h3').text(d => d);
-                ul.selectAll('li').data(d => data.filter(a => a.negeri === d)).enter().append('li').call(li => {
+                ul.selectAll('li').data(d => data.filter(a => a.negeri === d).sort((a,b)=>b.namasekolah.localeCompare(a.namasekolah))).enter().append('li').call(li => {
                     li.append('a').attr('href', d => d.link).text(d => d.namasekolah.toUpperCase());
                 })
             });
