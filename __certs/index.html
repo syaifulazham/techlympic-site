@@ -30,6 +30,14 @@
             list-style: none;
             padding-left: 20px;
         }
+
+        .marker{
+            font-style: italic;
+            color: #ffffff;
+            background-color: #059b05;
+            padding: 2px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -297,6 +305,7 @@
                 { negeri: 'TERENGGANU', namasekolah: 'SEKOLAH JENIS KEBANGSAAN CINA CHUNG HWA JERTEH', link: 'https://drive.google.com/file/d/1uyRhspHlvL4SzBF4V9AjyAJLZPOnYYYN/view?usp=drivesdk' },
                 { negeri: 'SARAWAK', namasekolah: 'SEKOLAH MENENGAH KEBANGSAAN ST LUKE', link: 'https://drive.google.com/file/d/1znZdetpAxvFrtsahQJDxV7hw_8M7gylq/view?usp=drivesdk' },
                 { negeri: 'SARAWAK', namasekolah: 'SEKOLAH MENENGAH KEBANGSAAN KIDURONG', link: 'https://drive.google.com/file/d/1lgdE2V5HNadVAkCnIE8o-ZPAwI7nvOZx/view?usp=drivesdk' },
+                { negeri: 'SARAWAK', namasekolah: 'SEKOLAH MENENGAH KEBANGSAAN KIDURONG', link:'https://drive.google.com/file/d/1zC5T-uE2HIqNU4EZExbPc5WJ-wgCcd4V/view?usp=sharing', marker: 'updated'},
                 { negeri: 'SARAWAK', namasekolah: 'SEKOLAH KEBANGSAAN LUMBA KUDA', link: 'https://drive.google.com/file/d/1PYvRMs6ionLWRdMcG65hTcWPc4Or3A8C/view?usp=drivesdk' },
                 { negeri: 'SARAWAK', namasekolah: 'SEKOLAH MENENGAH KEBANGSAAN ROSLI DHOBY', link: 'https://drive.google.com/file/d/1-EhQk9KXbxwBMR0opNCfe3HpOTjGoUNW/view?usp=drivesdk' },
                 { negeri: 'SARAWAK', namasekolah: 'SEKOLAH MENENGAH KEBANGSAAN TIONG HIN', link: 'https://drive.google.com/file/d/1yp1obbxhobmSG8x8y1-1MambTPnbL8nZ/view?usp=drivesdk' },
@@ -376,7 +385,8 @@
                 ul = o.append('ul')
                 ul.append('h3').text(d => d);
                 ul.selectAll('li').data(d => data.filter(a => a.negeri === d)).enter().append('li').call(li => {
-                    li.append('a').attr('href', d => d.link).text(d => d.namasekolah);
+                    li.append('a').attr('href', d => d.link).html(d => d.namasekolah + (d.marker !== undefined ? `<span class="marker">${d.marker}</span>` : ''));
+
                 })
             });
         });
