@@ -34,6 +34,14 @@
         li:hover{
             background-color: rgb(223, 223, 223);
         }
+
+        .marker{
+            font-style: italic;
+            color: #ffffff;
+            background-color: #059b05;
+            padding: 2px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -130,6 +138,9 @@
             {negeri:'KUALA LUMPUR',namasekolah:'SEKOLAH KEBANGSAAN SERI MURNI',link:'https://drive.google.com/file/d/1vu_sV3DXlOB0H9JwbE1Ve6hkWIUbSo7c/view?usp=drivesdk'},
             {negeri:'KUALA LUMPUR',namasekolah:'SK JALAN GURNEY 2',link:'https://drive.google.com/file/d/1-88Vb1nfXeX0skyXnair8qpVy95lLk0j/view?usp=drivesdk'},
             {negeri:'KUALA LUMPUR',namasekolah:'SEKOLAH KEBANGSAAN LA SALLE 1 SENTUL',link:'https://drive.google.com/file/d/1pHB9eH2R7mioTX_vTaKPlEoRQ9Mh9yp3/view?usp=drivesdk'},
+            {negeri:'KUALA LUMPUR',namasekolah:'SEKOLAH KEBANGSAAN LA SALLE 1 SENTUL',link:'https://drive.google.com/file/d/140eFk2uAueYO2zP7FuYrmQOjDKbER0ZH/view?usp=drivesdk', marker: 'updated'},
+            {negeri:'KUALA LUMPUR',namasekolah:'SMK TAMAN DESA',link:'https://drive.google.com/file/d/1Q9hXF4J0lOU9VagkRUiThUO0NjNZM4lT/view?usp=drivesdk', marker: 'updated'},
+            {negeri:'KUALA LUMPUR',namasekolah:'SMK SERI BINTANG UTARA',link:'https://drive.google.com/file/d/1KzTLxoszixClVxpt-FAzHVpAAwES-NMm/view?usp=drivesdk', marker: 'updated'},
             {negeri:'PUTRAJAYA',namasekolah:'SK PUTRAJAYA PRESINT 9(1)',link:'https://drive.google.com/file/d/19RqbI7ON7kn6pX7ugfgkUfFn5J2m3Ag6/view?usp=drivesdk'},
             {negeri:'PUTRAJAYA',namasekolah:'SK PUTRAJAYA PRESINT 9(2)',link:'https://drive.google.com/file/d/1LU5to1MZiXZw1DsWYs_ddNhulYuGFp-5/view?usp=drivesdk'},
             {negeri:'PERAK',namasekolah:'SK POS BERSIH',link:'https://drive.google.com/file/d/1FomhwE-Rjg4Q4uOBRxrkitAT6md905Jl/view?usp=drivesdk'},
@@ -247,6 +258,7 @@
             {negeri:'SABAH',namasekolah:'KOLEJ VOKASIONAL LIKAS',link:'https://drive.google.com/file/d/1ednCAg_1_hSx44P9BsZCXdbRE-CutN7C/view?usp=drivesdk'},
             {negeri:'SABAH',namasekolah:'SJKC CHEN SIN',link:'https://drive.google.com/file/d/1ZzWKO2cxZCKpELjtEpB059OqzuFmBkvc/view?usp=drivesdk'},
             {negeri:'SABAH',namasekolah:'SK SUKAU',link:'https://drive.google.com/file/d/1bqg4y9D1-drGd9YznY7xZtMDfu9iEL2g/view?usp=drivesdk'},
+            {negeri:'SABAH',namasekolah:'SK SUKAU',link:'https://drive.google.com/file/d/1Fp8GSvalvUXukFN16NwTiu4lb_kHXqiA/view?usp=drivesdk', marker: 'updated'},
             {negeri:'SABAH',namasekolah:'SEKOLAH KEBANGSAAN CINA ANGLOCHINESE',link:'https://drive.google.com/file/d/1G3yOT9CwqeZ3M8iXtMmVoaRh6E1DLs29/view?usp=drivesdk'},
             {negeri:'W.P.LABUAN',namasekolah:'SMK ST ANNE',link:'https://drive.google.com/file/d/1f6M3GJaSdx83coSDlBjP941NavtTfzUp/view?usp=drivesdk'},
             {negeri:'SARAWAK',namasekolah:'SMK SAINT LUKE',link:'https://drive.google.com/file/d/1lvqEx9C2C5RGocBS71y0uReMc12buCtG/view?usp=drivesdk'},
@@ -307,7 +319,7 @@
                 ul = o.append('ul')
                 ul.append('h3').text(d => d);
                 ul.selectAll('li').data(d => data.filter(a => a.negeri === d).sort((a,b)=>b.namasekolah.localeCompare(a.namasekolah))).enter().append('li').call(li => {
-                    li.append('a').attr('href', d => d.link).text(d => d.namasekolah.toUpperCase());
+                    li.append('a').attr('href', d => d.link).html(d => d.namasekolah.toUpperCase() + (d.marker !== undefined ? `<span class="marker">${d.marker}</span>` : ''));
                 })
             });
         });
